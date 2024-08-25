@@ -7,6 +7,7 @@
 		"watch:client": "node esbuild-config/client.dev.mjs",
 		"watch:server": "node esbuild-config/server.dev.mjs",
 		"watch:restart-server": "nodemon --config nodemon.json",
+		"watch:tailwind": "npx tailwindcss -i ./src/client/styles/app.css -o ./public/styles/app.css --watch",
 		"dev": "npm-run-all --parallel watch:*",
 		"build:client": "node esbuild-config/client.prod.mjs",
 		"build:server": "node esbuild-config/server.prod.mjs",
@@ -23,11 +24,22 @@
 	"author": "Covalence",
 	"license": "MIT",
 	"dependencies": {
+		"@types/bcrypt": "^5.0.2",
+		"@types/jsonwebtoken": "^9.0.6",
+		"@types/mysql": "^2.15.26",
+		"bcrypt": "^5.1.1",
 		"bootstrap": "^5.3.1",
 		"cors": "^2.8.5",
+		"dotenv": "^16.4.5",
 		"express": "^4.19.2",
+		"jsonwebtoken": "^9.0.2",
+		"mysql": "^2.18.1",
+		"mysql2": "^3.10.0",
+		"prettier-plugin-tailwindcss": "^0.6.2",
 		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
+		"react-dom": "^18.2.0",
+		"react-router-dom": "^6.23.1",
+		"tailwindcss": "^3.4.4"
 	},
 	"devDependencies": {
 		"@types/cors": "^2.8.13",
